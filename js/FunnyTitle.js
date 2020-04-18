@@ -1,1 +1,15 @@
-"use strict";var titleTime,OriginTitle=document.title;document.addEventListener("visibilitychange",function(){document.hidden?($('[rel="icon"]').attr("href","https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/favicon.png"),document.title="ヽ(●-`Д´-)ノ你要玩捉迷藏嘛",clearTimeout(titleTime)):($('[rel="icon"]').attr("href","https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/favicon.png"),document.title="ヾ(Ő∀Ő3)ノ好哦！"+OriginTitle,titleTime=setTimeout(function(){document.title=OriginTitle},2e3))});
+var OriginTitle = document.title;
+var titleTime;
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        $('[rel="icon"]').attr('href', "https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/favicon.png");
+        document.title = 'ヽ(●-`Д´-)ノ你要玩捉迷藏嘛';
+        clearTimeout(titleTime);
+    } else {
+        $('[rel="icon"]').attr('href', "https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/favicon.png");
+        document.title = 'ヾ(Ő∀Ő3)ノ好哦！' + OriginTitle;
+        titleTime = setTimeout(function() {
+            document.title = OriginTitle;
+        }, 2000);
+    }
+});
